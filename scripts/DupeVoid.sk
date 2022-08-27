@@ -1,0 +1,63 @@
+command /dupe:
+	trigger:
+		set {_item} to player's tool
+		give player tool of player
+
+every 10 seconds:
+	loop all players:
+		if {%loop-player%.randomitem} is true:
+			give loop-player 1 of random items out of all items
+
+on place:
+	if event-block is bedrock or barrier:
+		cancel event
+
+command /toggle:
+	trigger:
+		if {%player%.randomitem} is false:
+			send "&aEnabled!"
+			set {%player%.randomitem} to true
+		else if {%player%.randomitem} is not set:
+			send "&aEnabled!"
+			set {%player%.randomitem} to true
+		else if {%player%.randomitem} is true:
+			send "&4Disabled!"
+			set {%player%.randomitem} to false
+			
+
+on first join:
+	set {%player%.randomitem} to true
+
+
+command /spawn:
+	trigger:
+		teleport player to {spawn}
+
+
+command /setspawn:
+	permission: op
+	trigger:
+		set {spawn} to location of player
+
+
+every second:
+    loop all players:
+		
+        set {_rank} to loop-player's displayname
+        set tablist name of loop-player to "%{_rank}%"
+
+
+on first join:
+	teleport player to {spawn}
+command fakechat [<player>] [<text>] [<text>]:
+	permission: admin.use
+	trigger:
+		send "<%arg-2%>: %arg-3%" to arg-1
+on portal:
+	cancel event
+on first join:
+	wait 5 ticks
+	make player execute "spawn"
+on respawn:
+	wait 5 ticks
+	make player execute "spawn"
