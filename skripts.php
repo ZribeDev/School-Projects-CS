@@ -16,7 +16,7 @@
 		</nav>
 		<div class="content">
 			<h2>Skripts</h2>
-      <pre class="code">
+      <pre class="code" >
       <?php 
         $path = "scripts";
         
@@ -27,11 +27,7 @@
               $text = file_get_contents("scripts/".$file);
               echo "
               <p>
-              <div class=\"codebox\">
-              <code>   
-var message = \"".$text."\";
-alert(message);
-              </code>
+              <div class=\"codebox\" class=\"scroll\"><code>".$text.";</code>
               </div>
               </p>
               ";

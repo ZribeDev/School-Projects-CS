@@ -69,13 +69,20 @@ body.loggedin {
 
 .codebox {
   border:1px solid black;
-  background-color:#EEEEFF;
+  background-color:#878787;
   width:300px;
   overflow:auto;    
   padding:10px;
+  height: 150px;
+  overflow: scroll;
 }
 .codebox code {
     /* Styles in here affect the text of the codebox */
   font-size:0.9em;
         /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
 }
+
+div.scroll {
+  
+}
+
