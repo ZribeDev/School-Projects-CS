@@ -1,5 +1,5 @@
 .navtop {
-	background-color: #2f3947;
+	background-color: #201C33;
 	height: 60px;
 	width: 100%;
 	border: 0;
@@ -35,7 +35,7 @@
 	color: #eaebed;
 }
 body.loggedin {
-	background-color: #f3f4f7;
+	background-color: #120E25;
 }
 .content {
 	width: 1000px;
@@ -45,14 +45,15 @@ body.loggedin {
 	margin: 0;
 	padding: 25px 0;
 	font-size: 22px;
-	border-bottom: 1px solid #e0e0e3;
-	color: #4a536e;
+	border-bottom: 0px solid #e0e0e3;
+	color: #e0e0e3;
 }
 .content > p, .content > div {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 	margin: 25px 0;
 	padding: 25px;
-	background-color: #fff;
+	background-color: #201C33;
+  color: #e0e0e3;
 }
 .content > p table td, .content > div table td {
 	padding: 5px;
@@ -68,21 +69,20 @@ body.loggedin {
 }
 
 .codebox {
-  border:1px solid black;
-  background-color:#878787;
+  border:0px solid #e0e0e3;
+  background-color:#201C33;
   width:300px;
   overflow:auto;    
   padding:10px;
   height: 150px;
   overflow: scroll;
+  text-align: left;
 }
 .codebox code {
     /* Styles in here affect the text of the codebox */
   font-size:0.9em;
+  color: #e0e0e3;
+  text-align: left;
         /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
-}
-
-div.scroll {
-  
 }
 

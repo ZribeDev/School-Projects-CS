@@ -18,22 +18,31 @@
 			<h2>Skripts</h2>
       <pre class="code" >
       <?php 
+        if (!function_exists('str_contains')) {
+        function str_contains(string $haystack, string $needle): bool
+        {
+            return '' === $needle || false !== strpos($haystack, $needle);
+        }
+        }
         $path = "scripts";
         
         if ($handle = opendir($path)) {
           while (false !== ($file = readdir($handle))) {
               if ('.' === $file) continue;
               if ('..' === $file) continue;
+              if (str_contains($file, ".config")) continue;
               $text = file_get_contents("scripts/".$file);
-              echo "
-              
+              $data1 = file_get_contents("scripts/".$file.".config");
+              echo "<center style=\"color:white;\">".$data1."</center>";
+              echo "<center>
               <p>
-              <div class=\"codebox\" class=\"scroll\"><code>".$text.";</code>
+              <div class=\"codebox\" class=\"scroll\"><code>".$text."</code>
               </div>
+              
               </p>
-              <a href=\"https://github.com/ZribeDev/Skripts/blob/main/scripts/".$file."\">GitHub</a>
-              <a href=\"scripts/".$file."\" download>Download</a>
-              ";
+<a href=\"https://github.com/ZribeDev/Skripts/blob/main/scripts/".$file."\">GitHub</a>
+<a href=\"scripts/".$file."\" download>Download</a>
+              </center>";
               
           }
           closedir($handle);
