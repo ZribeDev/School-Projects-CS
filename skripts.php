@@ -26,11 +26,15 @@
               if ('..' === $file) continue;
               $text = file_get_contents("scripts/".$file);
               echo "
+              
               <p>
               <div class=\"codebox\" class=\"scroll\"><code>".$text.";</code>
               </div>
               </p>
+              <a href=\"https://github.com/ZribeDev/Skripts/blob/main/scripts/".$file."\">GitHub</a>
+              <a href=\"scripts/".$file."\" download>Download</a>
               ";
+              
           }
           closedir($handle);
         }
