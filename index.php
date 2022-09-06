@@ -11,7 +11,7 @@
 			<div>
 				<h1>Projects</h1>
         <a href="index.php"><i class="fa-solid fa-house"></i>Home</a>
-				<a href="projects.php"><i class="fa-solid fa-code"></i>Projects</a>
+				<a href="cs-projects.php"><i class="fa-solid fa-code"></i>Computer Science Projects</a>
 			</div>
 		</nav>
 		<div class="content">
