@@ -1,9 +1,0 @@
-on mine of iron ore:
-  clear drops
-  drop 1 iron ingot at location of event-block
-on mine of gold ore:
-  clear drops
-  drop 1 gold ingot at location of event-block
-on mine of copper ore:
-  clear drops
-  drop 1 copper ingot at location of event-block

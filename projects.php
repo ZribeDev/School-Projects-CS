@@ -9,13 +9,13 @@
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
-				<h1>Skripts</h1>
+				<h1>Projects</h1>
         <a href="index.php"><i class="fa-solid fa-house"></i>Home</a>
-				<a href="skripts.php"><i class="fa-solid fa-code"></i>Skripts</a>
+				<a href="projects.php"><i class="fa-solid fa-code"></i>Projects</a>
 			</div>
 		</nav>
 		<div class="content">
-			<h2>Skripts</h2>
+			<h2>Projects</h2>
       <pre class="code" >
       <?php 
         if (!function_exists('str_contains')) {
@@ -40,7 +40,7 @@
               </div>
               
               </p>
-<a href=\"https://github.com/ZribeDev/Skripts/blob/main/scripts/".$file."\">GitHub</a>
+<a href=\"https://github.com/ZribeDev/School-Project-CS/blob/main/scripts/".$file."\">GitHub</a>
 <a href=\"scripts/".$file."\" download>Download</a>
               </center>";
               
